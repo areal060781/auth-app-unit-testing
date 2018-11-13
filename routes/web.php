@@ -11,7 +11,11 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/{any}', function(){
+    return view('vueapp');
+})->where('any', '.*');
+
+/*Route::get('/', function () {
     return view('welcome', ['title' => "An even cooler way to do the title"]);
 });
 
@@ -26,4 +30,4 @@ Route::get('/page', function () {
             ])
         ]
     );
-});
+});*/
