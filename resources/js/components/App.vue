@@ -3,11 +3,12 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <ul class="navbar-nav">
+                    <router-link :to="{ name: 'home' }" class="nav-link">Home</router-link>
                     <router-link :to="{ name: 'welcome' }" class="nav-link">Welcome</router-link>
                     <router-link :to="{ name: 'page' }" class="nav-link" >Spa-Page</router-link>
-                    <router-link :to="{ name: 'home' }" class="nav-link">Home</router-link>
                     <router-link :to="{ name: 'hello' }" class="nav-link">Hello</router-link>
                     <router-link :to="{ name: 'users.index' }" class="nav-link">Users</router-link>
+                    <router-link :to="{ name: 'login' }" class="nav-link">Login</router-link>
                 </ul>
             </div>
         </nav>
