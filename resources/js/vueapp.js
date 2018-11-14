@@ -8,6 +8,7 @@ import Welcome from './components/Welcome'
 import Page from './components/Page'
 import Hello from './components/Hello'
 import Home from './components/Home'
+import UsersIndex from './components/UsersIndex';
 
 const router = new VueRouter({
     mode: 'history',
@@ -35,12 +36,18 @@ const router = new VueRouter({
             props: {
                 title: "This is the SPA Second Page",
                 author : {
-                    name : "Fisayo Afolayan",
+                    name : "Aida Real",
                     role : "Software Engineer",
-                    code : "Always keep it clean"
-                }
+                    code : "Don´t kill my vibe"
+                },
+
             }
         },
+        {
+            path: '/users',
+            name: 'users.index',
+            component: UsersIndex,
+        }
     ],
 })
 const app = new Vue({
