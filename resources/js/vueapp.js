@@ -1,7 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import auth from './auth.js';
+
+window.auth = auth;
 
 Vue.use(VueRouter)
+
+window.Event = new Vue;
 
 import App from './components/App'
 import Welcome from './components/Welcome'

@@ -19,7 +19,7 @@
 </template>
 
 <script>
-    //import axios from 'axios';
+    import axios from 'axios';
 
     export default {
         name: "Login",
@@ -39,9 +39,9 @@
 
                 axios.post('/api/login', data)
                     .then(({data}) => {
-                        // TODO: store data
-                        // data.token
-                        // data.user
+                        auth.login(data.token, data.user);
+
+                        this.$router.push('/dashboard');
                     })
                     .catch(({response}) => {
                         alert(response.data.message);
